@@ -1,0 +1,27 @@
+﻿@using Productify.Domain.Entities;
+@model List<Product>
+<h1>Product List Page</h1>
+<div class="container mt-3">
+    <h2>Striped Rows</h2>
+    <p>The .table-striped class adds zebra-stripes to a table:</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.CreatedOn</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
